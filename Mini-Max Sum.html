@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <p>
+        Given five positive integers, find the minimum and maximum values
+         that can be calculated by summing 
+        exactly four of the five integers. Then print the respective 
+        minimum and maximum values as a single line of
+         two space-separated long integers.
+    </p>
+    <script>
+    // Let me get the five numbers and store in narray 
+    let arr = [5], min=0,max=0;
+    for(i=0;i<5;i++){
+        arr[i]= Number(prompt("enter the numbers "+ (i+1)))
+    }
+    console.log(arr);
+    // the line below sorts the array in ascending order 
+     const sorted = arr.sort();
+    //  console.log(sorted);
+    //  let me get minimum  sum number 
+    for(i=0;i<arr.length-1;i++){
+        min+=arr[i]
+    }
+    // let me get the maximum sum number 
+    for(i=arr.length-1; i>=1;i--){
+        max+=arr[i];
+    }
+    console.log(min,max);
+
+
+    // this is analternative solution to the problem 
+    function minmax(arr){
+    let  min=0,max=0;
+    const sorted = arr.sort();
+    for(let i=0;i<arr.length-1 ;i++){
+    min+=arr[i]
+}
+for(i=arr.length-1; i>=1;i--){
+    max+=arr[i];
+}
+console.log(min,max);
+}
+
+
+    </script>
+</body>
